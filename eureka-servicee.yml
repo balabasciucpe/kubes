@@ -1,6 +1,6 @@
 
 server:
-  port: 9001    
+  port: 8761
       
 eureka:
   instance:
@@ -9,6 +9,7 @@ eureka:
     fetch-registry: false
     register-with-eureka: false
     serviceUrl:
-      defaultZone: http://${EUREKA_HOST:hostname}:${EUREKA_PORT:server.port}/eureka/
+      #defaultZone: http://${EUREKA_HOST:hostname}:${EUREKA_PORT:server.port}/eureka/
+      defaultZone: http://localhost:8761/eureka/
   server:
     wait-time-in-ms-when-sync-empty: 5
