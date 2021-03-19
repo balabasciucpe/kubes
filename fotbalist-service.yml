@@ -1,1 +1,13 @@
 
+  
+server:
+  port: 2000
+  
+eureka:
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://${EUREKA_HOST:localhost}:${EUREKA_PORT:8761}/eureka/
+  instance:
+    preferIpAddress: true
